@@ -41,9 +41,9 @@ For instance, the first patient (001\_F\_GA41\_BW2905\_PA44\_DG2\_PF0\_RC3\_S01\
 | GESTATIONAL_AGE | GA | Integer | - | GA | 
 | BIRTH_WEIGHT | BW | Integer | - | BW | 
 | POSTCONCEPTUAL_AGE | PA | Integer | - | PA | 
-| DIAGNOSIS_CODE | DG | Category/Integer | - |DG | 
-| PLUS_FORM | PF | Integer | - | PF | 
-| DEVICE | D | Integer | - | D | 
+| DIAGNOSIS_CODE | DG | Category/Integer | 0-13 |DG | 
+| PLUS_FORM | PF | Integer | 0/1/2 | PF | 
+| DEVICE | D | Integer | 1/2/3 | D | 
 | SERIES_NUMBER | S | Integer | - | S | 
   
 -**Patient's ID, Sex**
