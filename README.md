@@ -31,3 +31,49 @@ All images have a name in a predefined format sequentially describing the follow
 The patient information is also summarized in an Excel file (**infant_retinal_database_info.xlsx**). All information is anonymized and cannot be assigned to a specific patient, even directly by the patient himself.  
 
 For instance, the first patient (001\_F\_GA41\_BW2905\_PA44\_DG2\_PF0\_RC3\_S01\_1) is a female (F) with a gestational age (GA) of 41. week, a birth weight (BW) of 2,905 grams, a postconceptual age (PA) of 44.  week (all the images were taken at this postconceptual age), diagnosis (DG) 2 – hemorrhage, normal (without plus-form), images taken by Clarity RetCam 3, series (S) n. 1. Note that the identification of the given series is present in the name of any file. However, postconceptual age is always the same for given series, and it can handle a distinction between series. 
+
+**INFANT RETINAL DATABASE INFORMATION - PATIENTS' DATA**
+
+| Parameter | Parameter ID | Data type image name | Possible values | Accompanied in image name by |
+| --- | --- | --- | --- | --- |
+| ID | ID | Integer | - | - | 
+| SEX | ID | Category/Char | F/M | - | 
+| GESTATIONAL_AGE | GA | Integer | - | GA | 
+| BIRTH_WEIGHT | BW | Integer | - | BW | 
+| POSTCONCEPTUAL_AGE | PA | Integer | - | PA | 
+| DIAGNOSIS_CODE | DG | Category/Integer | - |DG | 
+| PLUS_FORM | PF | Integer | - | PF | 
+| DEVICE | D | Integer | - | D | 
+| SERIES_NUMBER | S | Integer | - | S | 
+  
+-**Patient's ID, Sex**
+The patient's ID (integer) is a unique identifier without any possibility of traceability to a specific patient. The dataset is completely anonymized, and there is no way anybody or even the patient can assign images and data to a specific patient.
+The patient's sex is categorical data with a character data type with possible values: Female (F) and Male (M).
+The dataset contains images from 188 patients - 94(M) and 94(F). The dataset is balanced in this respect, and there were no used triage parameters. The retinal images according to the sex are in the ratio 3081:2923 for F, resp. M.
+
+-**Gestational age**
+The gestational age (integer) is the patient's age at birth in weeks.
+
+-**Birth Weight**
+The birth weight (integer) is the patient's weight at birth. 
+ 
+-**Postconceptual Age**
+The postconceptual age (integer) is defined as the gestational plus chronological ages (postmenstrual age) in weeks.
+The common indicator for the given series of images is the postconceptual age, all images from the series were taken at the same moment. 
+
+-**Diagnosis**
+All defined possible diagnoses (categorical data with an integer type) are coded (see List Diagnosis in xlsx table).
+There are diagnoses (ROP 4A, 4B and 5) with no images, prepared for further extension.
+Two ophthalmological experts did the diagnosis and plus-form ascertaining. The cases where the results differed were discussed with the third expert, and a consensus was reached. Only in approximately 4% of the cases was it necessary to request a third expert opinion.
+Note that the diagnosis can change over time, i.e., different series can have varying diagnoses from the same patient (but for most patients, the diagnosis stays the same). The image series of the given patient consists of all images obtained from the examination; the diagnosis can be identifiable from the retinal images in the series. 
+Many illnesses are not identifiable only from the images as they have the same or very similar manifestation on the retina, so even the ability to filter healthy and unhealthy patients is valuable.
+
+-**Plus Form**
+The plus form is a symptom that can occur in any ROP stage but only in connection with ROP diagnosis, so the number of occurrences is not high. The variable is an integer type with three possible values: 0, 1, or 2. The pre-plus form is not observed in the dataset. The patients' division according to the plus form variable could be confusing as both patients with observed non-normal plus form (PF2) were in the beginning diagnosed as patients with normal plus form (PF0), so these two patients are counted twice - as patients with PF0 and PF2. The definition of pre-plus, and plus form of the disease, is vague, and the patients with pre-plus can be included in the plus-form part. It is also the limitation of all other datasets concerning the pre-plus and plus-form. The incidence of the pre-plus and plus-form is, moreover rare. All the patients with non-normal plus forms were indicated for the treatment.
+
+-**Device**
+All series for one patient were done with the same device (categorical with values of the integer type).
+
+-**Series Number**
+In one week, more examinations can be done, so the postconceptual age is not unique for examining the patient, and the variable series (integer type) has to be added. Most of the patients (140 patients) were observed moretimes, so there are several series for patients.
+
