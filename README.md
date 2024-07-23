@@ -28,7 +28,7 @@ All images have a name in a predefined format sequentially describing the follow
 
 **Patient's ID_sex_gestational age (GA)_ birth weight (BW)_ postconceptual age (PA)_ diagnosis code (DG)_ plus-form (PF)_ device(D)_ serie (S)_ image number.jpg.** 
 
-The patient information is also summarized in an Excel file (**infant_retinal_database_info.xlsx**). All information is anonymized and cannot be assigned to a specific patient, even directly by the patient himself.  
+The patient information is also summarized in a file(**infant_retinal_database_info.xlsx** or **infant_retinal_database_info.csv** (patient data without description, for description see xlsx file). All information is anonymized and cannot be assigned to a specific patient, even directly by the patient himself.  
 
 For instance, the first patient (001\_F\_GA41\_BW2905\_PA44\_DG2\_PF0\_RC3\_S01\_1) is a female (F) with a gestational age (GA) of 41. week, a birth weight (BW) of 2,905 grams, a postconceptual age (PA) of 44.  week (all the images were taken at this postconceptual age), diagnosis (DG) 2 – hemorrhage, normal (without plus-form), images taken by Clarity RetCam 3, series (S) n. 1. Note that the identification of the given series is present in the name of any file. However, postconceptual age is always the same for given series, and it can handle a distinction between series. 
 
